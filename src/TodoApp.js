@@ -1,9 +1,10 @@
 import React from 'react';
+import { CustomForm } from './components/CustomForm';
 
 export const TodoApp = () => {
     return (
-        <>
-            <h2>Hola a todos nuevamente</h2>
-        </>
+        <div className='container text-center border border-primary'>
+            <CustomForm />
+        </div>
     );
 };
