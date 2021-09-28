@@ -1,18 +1,7 @@
 import React from 'react';
-import { useForm } from '../helpers/useForm';
-import { useSubmit } from '../helpers/useSubmit';
 
-export const CustomForm = () => {
-    const { values, handleInputChange } = useForm({
-        todo: '',
-        date: '',
-        time: '',
-        description: '',
-    });
-
+export const CustomForm = ({ values, handleInputChange, handleSubmit }) => {
     const { todo, date, time, description } = values;
-
-    const { handleSubmit } = useSubmit(values);
 
     return (
         <>
