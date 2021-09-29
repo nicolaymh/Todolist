@@ -9,7 +9,7 @@ import { useSubmit } from './hooks/useSubmit';
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
-    const { todos, handleSubmit } = useSubmit(values);
+    const { todos, handleSubmit, formError } = useSubmit(values);
 
     useEffect(() => {
         setValues(initialStateForm);
@@ -23,6 +23,7 @@ export const TodoApp = () => {
                     values={values}
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
+                    formError={formError}
                 />
 
                 <div className='col'>

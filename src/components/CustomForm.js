@@ -1,6 +1,11 @@
 import React from 'react';
 
-export const CustomForm = ({ values, handleInputChange, handleSubmit }) => {
+export const CustomForm = ({
+    values,
+    handleInputChange,
+    handleSubmit,
+    formError,
+}) => {
     const { todo, date, time, description } = values;
 
     return (
@@ -47,6 +52,11 @@ export const CustomForm = ({ values, handleInputChange, handleSubmit }) => {
                         value={description}
                     ></textarea>
                 </form>
+                {formError && (
+                    <div class='alert alert-danger' role='alert'>
+                        you must fill in all the data
+                    </div>
+                )}
             </div>
         </>
     );
