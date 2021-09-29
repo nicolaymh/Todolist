@@ -1,4 +1,5 @@
 import React from 'react';
+import { ErrorFormFields } from './ErrorFormFields';
 
 export const CustomForm = ({
     values,
@@ -52,11 +53,7 @@ export const CustomForm = ({
                         value={description}
                     ></textarea>
                 </form>
-                {formError && (
-                    <div class='alert alert-danger' role='alert'>
-                        you must fill in all the data
-                    </div>
-                )}
+                {formError && <ErrorFormFields />}
             </div>
         </>
     );
