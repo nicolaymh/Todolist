@@ -8,5 +8,5 @@ export const useSubmit = (values) => {
         setTodos([...todos, values]);
     };
 
-    return { todos, handleSubmit };
+    return { todos, setTodos, handleSubmit };
 };

@@ -1,8 +1,6 @@
 import React from 'react';
 
 export const TodoList = ({ eleToDo }) => {
-    console.log(eleToDo);
-
     const { todo, date, time, description } = eleToDo;
 
     return (

@@ -6,9 +6,10 @@ export const useForm = (initialState = {}) => {
     const handleInputChange = ({ target }) => {
         setValues({
             ...values,
+            id: new Date().getTime(),
             [target.name]: target.value,
         });
     };
 
-    return { values, handleInputChange };
+    return { values, setValues, handleInputChange };
 };
