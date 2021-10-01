@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useSubmit = (values) => {
+export const useSubmit = (values, setValues, initialState) => {
     const [todos, setTodos] = useState([]);
     const [formError, setFormError] = useState(false);
 
@@ -16,11 +16,12 @@ export const useSubmit = (values) => {
             time.trim() === '' ||
             description.trim() === ''
         ) {
-            setTodos([...todos]);
             setFormError(true);
         } else {
             setTodos([...todos, values]);
             setFormError(false);
+
+            setValues(initialState);
         }
     };
 
