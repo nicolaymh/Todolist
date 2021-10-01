@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { CustomForm } from './components/CustomForm';
 import { TodoList } from './components/TodoList';
 import { TodoListTitle } from './components/TodoListTitle';
@@ -9,13 +9,11 @@ import { useSubmit } from './hooks/useSubmit';
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
-    const { todos, handleSubmit, formError } = useSubmit(values);
-
-    useEffect(() => {
-        setValues(initialStateForm);
-    }, [todos, setValues]);
-
- 
+    const { todos, handleSubmit, formError } = useSubmit(
+        values,
+        setValues,
+        initialStateForm,
+    );
 
     return (
         <div className='container text-center border border-primary'>
@@ -32,8 +30,12 @@ export const TodoApp = () => {
                     <TodoListTitle todos={todos} />
 
                     <div className='row justify-content-center'>
-                        {todos.map((eleToDo) => (
-                            <TodoList key={eleToDo.id} eleToDo={eleToDo} />
+                        {todos.map((eleToDo, index) => (
+                            <TodoList
+                                key={eleToDo.id}
+                                index={index}
+                                eleToDo={eleToDo}
+                            />
                         ))}
                     </div>
                 </div>

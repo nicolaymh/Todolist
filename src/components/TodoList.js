@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const TodoList = ({ eleToDo }) => {
+export const TodoList = ({ eleToDo, index }) => {
     const { todo, date, time, description } = eleToDo;
 
     return (
         <div className='col-9 card border-success mb-3 w'>
             <div className='col card-header bg-transparent border-success'>
-                Todo #1
+                Todo # {index + 1}
             </div>
             <div className='card-body text-success'>
                 <h5 className='card-title'>{todo}</h5>
