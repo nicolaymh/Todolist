@@ -7,18 +7,23 @@ export const useSubmit = (values, setValues, initialState) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { id, todo, date, time, description } = values;
+        const { id, todo, dateTime, description } = values;
 
         if (
             id.toString().trim() === '' ||
             todo.trim() === '' ||
-            date.trim() === '' ||
-            time.trim() === '' ||
+            dateTime.trim() === '' ||
             description.trim() === ''
         ) {
             setFormError(true);
         } else {
-            setTodos([...todos, values]);
+            let organizeDateTime = [...todos, values];
+
+            organizeDateTime
+                .sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime))
+                .reverse();
+
+            setTodos([...organizeDateTime]);
             setFormError(false);
 
             setValues(initialState);

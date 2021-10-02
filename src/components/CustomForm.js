@@ -7,11 +7,11 @@ export const CustomForm = ({
     handleSubmit,
     formError,
 }) => {
-    const { todo, date, time, description } = values;
+    const { todo, dateTime, description } = values;
 
     return (
         <>
-            <div className='col'>
+            <div className='col mt-5'>
                 <form onSubmit={handleSubmit}>
                     <div className='d-flex'>
                         <input
@@ -31,17 +31,10 @@ export const CustomForm = ({
                     <div className='d-flex'>
                         <input
                             className='form-control mb-2'
-                            type='date'
-                            name='date'
+                            type='datetime-local'
+                            name='dateTime'
                             onChange={handleInputChange}
-                            value={date}
-                        />
-                        <input
-                            className='form-control mb-2'
-                            type='time'
-                            name='time'
-                            onChange={handleInputChange}
-                            value={time}
+                            value={dateTime}
                         />
                     </div>
 

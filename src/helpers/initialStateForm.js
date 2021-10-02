@@ -1,7 +1,6 @@
 export const initialStateForm = {
     id: '',
     todo: '',
-    date: '',
-    time: '',
+    dateTime: '',
     description: '',
 };
