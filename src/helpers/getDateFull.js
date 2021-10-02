@@ -1,28 +1,7 @@
-export const getDateFull = (dateTime) => {
-    const days = [
-        `Sunday`,
-        `Monday`,
-        `Tuesday`,
-        `Wednesday`,
-        `Thursday`,
-        `Friday`,
-        `Saturday`,
-    ];
+import { daysMonths } from './daysMonths';
 
-    const months = [
-        `January`,
-        `February`,
-        `March`,
-        `April`,
-        `May`,
-        `June`,
-        `July`,
-        `August`,
-        `September`,
-        `October`,
-        `November`,
-        `December`,
-    ];
+export const getDateFull = (dateTime) => {
+    const { days, months } = daysMonths();
 
     let date = new Date(dateTime);
 
