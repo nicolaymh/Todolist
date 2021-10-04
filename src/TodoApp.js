@@ -16,8 +16,7 @@ export const TodoApp = () => {
     );
 
     return (
-        <div className='container text-center border border-primary'>
-            <h2>TodoList Reactjs</h2>
+        <div className='container text-center'>
             <div className='row'>
                 <CustomForm
                     values={values}

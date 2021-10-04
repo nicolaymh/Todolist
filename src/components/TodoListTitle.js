@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TodoListTitle = ({ todos }) => {
     return (
-        <div>
+        <div className='pt-3'>
             {todos.length === 0 ? (
                 <h1>Add Todos</h1>
             ) : (
