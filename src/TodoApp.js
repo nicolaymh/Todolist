@@ -9,7 +9,7 @@ import { useSubmit } from './hooks/useSubmit';
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
-    const { todos, handleSubmit, formError } = useSubmit(
+    const { todos, setTodos, handleSubmit, formError } = useSubmit(
         values,
         setValues,
         initialStateForm,
@@ -35,6 +35,8 @@ export const TodoApp = () => {
                                 key={eleToDo.id}
                                 index={index}
                                 eleToDo={eleToDo}
+                                todos={todos}
+                                setTodos={setTodos}
                             />
                         ))}
                     </div>

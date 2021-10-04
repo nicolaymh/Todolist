@@ -1,10 +1,15 @@
 import React from 'react';
 import { getDateFull } from '../helpers/getDateFull';
 
-export const TodoList = ({ eleToDo, index }) => {
-    const { todo, dateTime, description } = eleToDo;
+export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
+    const { id, todo, dateTime, description } = eleToDo;
 
     const { month, day, year, dayMonth, hour, minutes } = getDateFull(dateTime);
+
+    const deleteTodo = (id) => {
+        const deleteTodo = todos.filter((todo) => todo.id !== id);
+        setTodos([...deleteTodo]);
+    };
 
     return (
         <div className='col-9 card border-success mb-3 w'>
@@ -21,7 +26,12 @@ export const TodoList = ({ eleToDo, index }) => {
                 <p className='card-text'>Description: {description}</p>
             </div>
             <div className='card-footer bg-transparent border-success d-grid'>
-                <button className='btn btn-danger'>Delete</button>
+                <button
+                    onClick={() => deleteTodo(id)}
+                    className='btn btn-danger'
+                >
+                    Delete
+                </button>
             </div>
         </div>
     );
