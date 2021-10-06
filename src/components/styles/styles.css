@@ -1,9 +1,15 @@
 body {
-    background-color: #36c4b4 !important;
+    background-color: #dedede !important;
 }
 
 .generalContainer {
-    border-radius: 50px;
-    background: #36c4b4;
-    box-shadow: inset 16px 16px 0px #299387, inset -16px -16px 0px #44f5e1;
+    border-radius: 76px;
+    background: #ece4e4;
+    box-shadow: inset -6px -6px 15px #666666, inset 6px 6px 15px #ffffff;
+}
+
+.addTodoTitle {
+    border-radius: 28px;
+    background: #ece4e4;
+    box-shadow: -5px 5px 24px #5e5b5b, 5px -5px 24px #ffffff;
 }

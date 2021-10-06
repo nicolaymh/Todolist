@@ -2,8 +2,6 @@ import React from 'react';
 import { ErrorFormFields } from './ErrorFormFields';
 import { TodoTitle } from './TodoTitle';
 
-
-
 export const CustomForm = ({
     values,
     handleInputChange,
@@ -54,7 +52,9 @@ export const CustomForm = ({
                         value={description}
                     ></textarea>
                 </form>
-                {formError && <ErrorFormFields />}
+                <div className='d-flex justify-content-center'>
+                    {formError && <ErrorFormFields />}
+                </div>
             </div>
         </>
     );

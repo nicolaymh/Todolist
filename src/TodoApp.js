@@ -1,7 +1,6 @@
 import React from 'react';
 import { CustomForm } from './components/CustomForm';
 import { TodoList } from './components/TodoList';
-import { TodoListTitle } from './components/TodoListTitle';
 import { initialStateForm } from './helpers/initialStateForm';
 import { useForm } from './hooks/useForm';
 import { useSubmit } from './hooks/useSubmit';
@@ -19,7 +18,7 @@ export const TodoApp = () => {
 
     return (
         <div className='generalContainer container text-center'>
-            <div className='row row-cols-1 justify-content-center'>
+            <div className='row row-cols-1 justify-content-center mt-2'>
                 <CustomForm
                     values={values}
                     handleInputChange={handleInputChange}
@@ -28,20 +27,16 @@ export const TodoApp = () => {
                     todos={todos}
                 />
 
-                <div className='col'>
-                    <TodoListTitle todos={todos} />
-
-                    <div className='row justify-content-center'>
-                        {todos.map((eleToDo, index) => (
-                            <TodoList
-                                key={eleToDo.id}
-                                index={index}
-                                eleToDo={eleToDo}
-                                todos={todos}
-                                setTodos={setTodos}
-                            />
-                        ))}
-                    </div>
+                <div className='row justify-content-center mb-4'>
+                    {todos.map((eleToDo, index) => (
+                        <TodoList
+                            key={eleToDo.id}
+                            index={index}
+                            eleToDo={eleToDo}
+                            todos={todos}
+                            setTodos={setTodos}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

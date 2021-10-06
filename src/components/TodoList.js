@@ -12,25 +12,21 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
     };
 
     return (
-        <div className='col-9 card border-success mb-3 w'>
-            <div className='col card-header bg-transparent border-success'>
-                Todo # {index + 1}
-            </div>
-            <div className='card-body text-success'>
-                <h5 className='card-title'>{todo}</h5>
-                <p className='card-text'>
-                    {`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}
-                </p>
+        <div className='col-5 card border-success mb-3'>
+            <div className='card text-white bg-primary mb-3'>
+                <div className='card-header'>To-Do-#{index + 1}</div>
+                <div className='card-body'>
+                    <h5 className='card-title'>{todo}</h5>
+                    <p className='card-text'>{`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}</p>
+                    <p className='card-text'>{description}</p>
 
-                <p className='card-text'>Description: {description}</p>
-            </div>
-            <div className='card-footer bg-transparent border-success d-grid'>
-                <button
-                    onClick={() => deleteTodo(id)}
-                    className='btn btn-danger'
-                >
-                    Delete
-                </button>
+                    <button
+                        onClick={() => deleteTodo(id)}
+                        className='btn btn-danger'
+                    >
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
     );
