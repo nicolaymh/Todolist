@@ -1,8 +1,8 @@
 import React from 'react';
 import { ErrorFormFields } from './ErrorFormFields';
 
-import logo from '../images/logo.png';
 import './styles/form.css';
+import { TodoTitle } from './TodoTitle';
 
 export const CustomForm = ({
     values,
@@ -15,14 +15,7 @@ export const CustomForm = ({
     return (
         <>
             <div className='col mt-2 shadow-lg'>
-                <div className='text-end'>
-                    <img src={logo} alt='logo' width='40px'></img>
-                </div>
-                <div>
-                    <h2 className='fs-1 fst-italic text-warning'>
-                        To-Do-Reactjs
-                    </h2>
-                </div>
+                <TodoTitle />
 
                 <form className='mx-3 my-3' onSubmit={handleSubmit}>
                     <div className='d-flex'>
