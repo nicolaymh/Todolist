@@ -19,7 +19,6 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
             <div className='card-body text-success'>
                 <h5 className='card-title'>{todo}</h5>
                 <p className='card-text'>
-                    DateTime:
                     {`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}
                 </p>
 

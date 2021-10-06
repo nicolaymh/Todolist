@@ -1,8 +1,8 @@
 import React from 'react';
 import { ErrorFormFields } from './ErrorFormFields';
-
-import './styles/form.css';
 import { TodoTitle } from './TodoTitle';
+
+
 
 export const CustomForm = ({
     values,
@@ -14,7 +14,7 @@ export const CustomForm = ({
 
     return (
         <>
-            <div className='col pb-3 neomor'>
+            <div className='mt-2 col pb-3'>
                 <TodoTitle />
 
                 <form className='mx-3 my-3' onSubmit={handleSubmit}>

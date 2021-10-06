@@ -1,0 +1,9 @@
+body {
+    background-color: #36c4b4 !important;
+}
+
+.generalContainer {
+    border-radius: 50px;
+    background: #36c4b4;
+    box-shadow: inset 16px 16px 0px #299387, inset -16px -16px 0px #44f5e1;
+}

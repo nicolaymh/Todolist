@@ -6,6 +6,8 @@ import { initialStateForm } from './helpers/initialStateForm';
 import { useForm } from './hooks/useForm';
 import { useSubmit } from './hooks/useSubmit';
 
+import './components/styles/styles.css';
+
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
@@ -16,13 +18,14 @@ export const TodoApp = () => {
     );
 
     return (
-        <div className='container text-center'>
-            <div className='row'>
+        <div className='generalContainer container text-center'>
+            <div className='row row-cols-1 justify-content-center'>
                 <CustomForm
                     values={values}
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
                     formError={formError}
+                    todos={todos}
                 />
 
                 <div className='col'>
