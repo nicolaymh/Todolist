@@ -14,12 +14,11 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
     };
 
     return (
-        <div className='addTodo col-sm-8 col-lg-4 text-white m-3'>
+        <div className='addTodo col-10 col-sm-8 col-lg-3 text-white m-2'>
             <div className='card-header'>To-Do-#{index + 1}</div>
             <div className='card-body m-auto'>
                 <h5 className='card-title'>{todo}</h5>
-                <p className='card-text'>
-                    DateTime:
+                <p className='fs-6'>
                     {`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}
                 </p>
                 <button
