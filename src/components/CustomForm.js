@@ -14,7 +14,7 @@ export const CustomForm = ({
 
     return (
         <>
-            <div className='col mt-2 shadow-lg'>
+            <div className='col pb-3 neomor'>
                 <TodoTitle />
 
                 <form className='mx-3 my-3' onSubmit={handleSubmit}>
