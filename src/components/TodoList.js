@@ -1,8 +1,10 @@
 import React from 'react';
 import { getDateFull } from '../helpers/getDateFull';
 
+import './styles/styles.css';
+
 export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
-    const { id, todo, dateTime, description } = eleToDo;
+    const { id, todo, dateTime } = eleToDo;
 
     const { month, day, year, dayMonth, hour, minutes } = getDateFull(dateTime);
 
@@ -12,21 +14,20 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
     };
 
     return (
-        <div className='col-5 card border-success mb-3'>
-            <div className='card text-white bg-primary mb-3'>
-                <div className='card-header'>To-Do-#{index + 1}</div>
-                <div className='card-body'>
-                    <h5 className='card-title'>{todo}</h5>
-                    <p className='card-text'>{`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}</p>
-                    <p className='card-text'>{description}</p>
-
-                    <button
-                        onClick={() => deleteTodo(id)}
-                        className='btn btn-danger'
-                    >
-                        Delete
-                    </button>
-                </div>
+        <div className='addTodo col-sm-8 col-lg-4 text-white m-3'>
+            <div className='card-header'>To-Do-#{index + 1}</div>
+            <div className='card-body m-auto'>
+                <h5 className='card-title'>{todo}</h5>
+                <p className='card-text'>
+                    DateTime:
+                    {`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}
+                </p>
+                <button
+                    onClick={() => deleteTodo(id)}
+                    className='btn btn-danger m-auto'
+                >
+                    Delete
+                </button>
             </div>
         </div>
     );

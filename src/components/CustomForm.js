@@ -8,7 +8,7 @@ export const CustomForm = ({
     handleSubmit,
     formError,
 }) => {
-    const { todo, dateTime, description } = values;
+    const { todo, dateTime } = values;
 
     return (
         <>
@@ -43,14 +43,6 @@ export const CustomForm = ({
                             value={dateTime}
                         />
                     </div>
-
-                    <textarea
-                        className='bginputs form-control rounded-pill'
-                        name='description'
-                        placeholder='Write a short description'
-                        onChange={handleInputChange}
-                        value={description}
-                    ></textarea>
                 </form>
                 <div className='d-flex justify-content-center'>
                     {formError && <ErrorFormFields />}

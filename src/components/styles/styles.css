@@ -8,8 +8,8 @@ body {
     box-shadow: inset -6px -6px 15px #666666, inset 6px 6px 15px #ffffff;
 }
 
-.addTodoTitle {
-    border-radius: 28px;
-    background: #ece4e4;
-    box-shadow: -5px 5px 24px #5e5b5b, 5px -5px 24px #ffffff;
+.addTodo {
+    border-radius: 55px;
+    background: #0d6efd;
+    box-shadow: inset -9px -9px 33px #094bac, inset 9px 9px 33px #1191ff;
 }
