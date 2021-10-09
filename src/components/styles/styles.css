@@ -13,3 +13,10 @@ body {
     background: #0d6efd;
     box-shadow: inset -9px -9px 33px #094bac, inset 9px 9px 33px #1191ff;
 }
+
+.circulo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}

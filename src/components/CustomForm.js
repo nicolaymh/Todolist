@@ -34,7 +34,7 @@ export const CustomForm = ({
                         </button>
                     </div>
 
-                    <div className='d-flex'>
+                    <div>
                         <input
                             className='form-control mb-2 rounded-pill'
                             type='datetime-local'
@@ -42,6 +42,14 @@ export const CustomForm = ({
                             onChange={handleInputChange}
                             value={dateTime}
                         />
+                    </div>
+                    <div className='row row-cols-5 text-center mt-4 justify-content-center'>
+                        <div className='col circulo bg-info text-info'>
+                            color
+                        </div>
+                        <div className='col bg-danger infoColor'></div>
+                        <div className='col bg-success'></div>
+                        <div className='col bg-warning'></div>
                     </div>
                 </form>
                 <div className='d-flex justify-content-center'>
