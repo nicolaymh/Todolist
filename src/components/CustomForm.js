@@ -1,5 +1,6 @@
 import React from 'react';
 import { ErrorFormFields } from './ErrorFormFields';
+import { OptionColor } from './OptionColor';
 import { TodoTitle } from './TodoTitle';
 
 export const CustomForm = ({
@@ -7,6 +8,7 @@ export const CustomForm = ({
     handleInputChange,
     handleSubmit,
     formError,
+    optionColor,
 }) => {
     const { todo, dateTime } = values;
 
@@ -43,15 +45,17 @@ export const CustomForm = ({
                             value={dateTime}
                         />
                     </div>
-                    <div className='row row-cols-5 text-center mt-4 justify-content-center'>
-                        <div className='col circulo bg-info text-info'>
-                            color
-                        </div>
-                        <div className='col bg-danger infoColor'></div>
-                        <div className='col bg-success'></div>
-                        <div className='col bg-warning'></div>
+
+                    <div className='row text-center mt-4 d-flex justify-content-center'>
+                        {optionColor.map((color, index) => (
+                            <OptionColor
+                                key={index + new Date().getTime()}
+                                color={color}
+                            />
+                        ))}
                     </div>
                 </form>
+
                 <div className='d-flex justify-content-center'>
                     {formError && <ErrorFormFields />}
                 </div>

@@ -14,9 +14,37 @@ body {
     box-shadow: inset -9px -9px 33px #094bac, inset 9px 9px 33px #1191ff;
 }
 
-.circulo {
-    width: 10px;
-    height: 10px;
+.cardPrimary {
     border-radius: 50%;
-    background: red;
+    background: #0d6efd;
+    box-shadow: inset -5px -5px 10px #052c65, inset 5px 5px 10px #15b0ff;
+    color: transparent;
+}
+
+.cardWarning {
+    border-radius: 50%;
+    background: #ffc107;
+    box-shadow: inset -5px -5px 10px #664d03, inset 5px 5px 10px #ffff0b;
+    color: transparent;
+}
+
+.cardInfo {
+    border-radius: 50%;
+    background: #0dcaf0;
+    box-shadow: inset -5px -5px 10px #055160, inset 5px 5px 10px #15ffff;
+    color: transparent;
+}
+
+.cardSuccess {
+    border-radius: 50%;
+    background: #198754;
+    box-shadow: inset -5px -5px 10px #0a3622, inset 5px 5px 10px #28d886;
+    color: transparent;
+}
+
+.cardDanger {
+    border-radius: 50%;
+    background: #dc3545;
+    box-shadow: inset -5px -5px 10px #58151c, inset 5px 5px 10px #ff556e;
+    color: transparent;
 }

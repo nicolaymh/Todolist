@@ -5,6 +5,8 @@ export const getDateFull = (dateTime) => {
 
     let date = new Date(dateTime);
 
+    console.log(date);
+
     const dateFull = {
         month: months[date.getMonth()],
         day: days[date.getDay()],
