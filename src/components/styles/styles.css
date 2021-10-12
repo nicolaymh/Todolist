@@ -2,18 +2,27 @@ body {
     background-color: #dedede !important;
 }
 
+/*--------------------------------------------------------------->
+<!--------------- General style for the form -------------------->
+<!---------------------------------------------------------------*/
 .generalContainer {
     border-radius: 76px;
     background: #ece4e4;
     box-shadow: inset -6px -6px 15px #666666, inset 6px 6px 15px #ffffff;
 }
+/*---------------------------------------------------------------------------*/
 
 .addTodo {
     border-radius: 55px;
-    /* background: #0d6efd; */
-    box-shadow: inset -9px -9px 33px #094bac, inset 9px 9px 33px #1191ff;
+    background: linear-gradient(315deg, #ffcf07, #e6ae06);
+    box-shadow: -5px -5px 10px #664d03, 5px 5px 10px #ffff0b;
+    opacity: 0.7;
+    text-decoration: dashed;
 }
 
+/*----------------------------------------------------------------->
+<!------- Choice of colors for to-do and push button effect ------->
+<!----------------------------------------------------------------*/
 .cardPrimary {
     border-radius: 50%;
     background: #0d6efd;
@@ -21,10 +30,11 @@ body {
     color: transparent;
 }
 .cardPrimarySelected {
-    border-radius: 50px;
+    border-radius: 50%;
     background: #0d6efd;
     box-shadow: inset 5px 5px 0px #0b5fda, inset -5px -5px 0px #0f7dff;
 }
+/*----------------------------------------------------------------*/
 
 .cardWarning {
     border-radius: 50%;
@@ -33,10 +43,11 @@ body {
     color: transparent;
 }
 .cardWarningSelected {
-    border-radius: 50px;
+    border-radius: 50%;
     background: #ffc107;
     box-shadow: inset 5px 5px 0px #dba606, inset -5px -5px 0px #ffdc08;
 }
+/*----------------------------------------------------------------*/
 
 .cardInfo {
     border-radius: 50%;
@@ -45,11 +56,11 @@ body {
     color: transparent;
 }
 .cardInfoSelected {
-    border-radius: 50px;
+    border-radius: 50%;
     background: #0dcaf0;
     box-shadow: inset 5px 5px 0px #0baece, inset -5px -5px 0px #0fe6ff;
 }
-
+/*---------------------------------------------------------------------------*/
 .cardSuccess {
     border-radius: 50%;
     background: #198754;
@@ -57,11 +68,11 @@ body {
     color: transparent;
 }
 .cardSuccessSelected {
-    border-radius: 50px;
+    border-radius: 50%;
     background: #198754;
     box-shadow: inset 5px 5px 0px #167448, inset -5px -5px 0px #1d9a60;
 }
-
+/*---------------------------------------------------------------------------*/
 .cardDanger {
     border-radius: 50%;
     background: #dc3545;
@@ -69,7 +80,8 @@ body {
     color: transparent;
 }
 .cardDangerSelected {
-    border-radius: 50px;
+    border-radius: 50%;
     background: #dc3545;
     box-shadow: inset 5px 5px 0px #bd2e3b, inset -5px -5px 0px #fb3c4f;
 }
+/*---------------------------------------------------------------------------*/
