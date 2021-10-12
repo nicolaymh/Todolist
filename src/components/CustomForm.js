@@ -22,6 +22,10 @@ export const CustomForm = ({
                 <TodoTitle />
 
                 <form className='mx-3 my-3' onSubmit={handleSubmit}>
+                    <div className='d-flex justify-content-center'>
+                        {formError && <ErrorFormFields />}
+                    </div>
+
                     <div className='d-flex'>
                         <input
                             className='form-control mb-2 me-3 rounded-pill shadow-lg'
@@ -54,6 +58,7 @@ export const CustomForm = ({
                         {colors.map((color, index) => (
                             <OptionColor
                                 key={index + new Date().getTime()}
+                                index={index}
                                 color={color}
                                 colors={colors}
                                 setColors={setColors}
@@ -62,10 +67,6 @@ export const CustomForm = ({
                         ))}
                     </div>
                 </form>
-
-                <div className='d-flex justify-content-center'>
-                    {formError && <ErrorFormFields />}
-                </div>
             </div>
         </>
     );

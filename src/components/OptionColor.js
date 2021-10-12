@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const OptionColor = ({ color, handleChangeFocus }) => {
+export const OptionColor = ({ index, color, handleChangeFocus }) => {
     const { background, design, colorSelected, focusState } = color;
 
     return (
@@ -10,7 +10,7 @@ export const OptionColor = ({ color, handleChangeFocus }) => {
             } col-2 my-3 mx-1 my-sm-2`}
             onClick={() => handleChangeFocus(background)}
         >
-            1
+            {index + 1}
         </div>
     );
 };

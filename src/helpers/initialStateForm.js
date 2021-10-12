@@ -3,4 +3,5 @@ export const initialStateForm = {
     todo: '',
     dateTime: '',
     color: '',
+    state: false,
 };
