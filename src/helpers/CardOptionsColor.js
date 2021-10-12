@@ -1,4 +1,4 @@
-export const CardOptionsColor = [
+export const cardOptionsColor = [
     {
         background: 'bg-primary',
         design: 'cardPrimary',
