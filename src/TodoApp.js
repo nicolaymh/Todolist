@@ -21,6 +21,7 @@ export const TodoApp = () => {
             <div className='row row-cols-1 justify-content-center mt-2'>
                 <CustomForm
                     values={values}
+                    setValues={setValues}
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
                     formError={formError}

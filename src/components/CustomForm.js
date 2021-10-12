@@ -6,13 +6,15 @@ import { TodoTitle } from './TodoTitle';
 
 export const CustomForm = ({
     values,
+    setValues,
     handleInputChange,
     handleSubmit,
     formError,
 }) => {
     const { todo, dateTime } = values;
 
-    const { colors, setColors, handleChangeFocus } = useCardOptionsColor();
+    const { colors, setColors, handleChangeFocus } =
+        useCardOptionsColor(setValues);
 
     return (
         <>
