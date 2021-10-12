@@ -13,9 +13,31 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
         setTodos([...deleteTodo]);
     };
 
+    const cardClass = () => {
+        switch (color) {
+            case 'bg-primary':
+                return 'addTodoPrimary';
+
+            case 'bg-warning':
+                return 'addTodoWarning';
+
+            case 'bg-info':
+                return 'addTodoInfo';
+
+            case 'bg-success':
+                return 'addTodoSuccess';
+
+            case 'bg-danger':
+                return 'addTodoDanger';
+
+            default:
+                return 'addTodoInfo';
+        }
+    };
+
     return (
         <div
-            className={`${color} addTodo col-10 col-sm-8 col-lg-3 text-white m-2`}
+            className={`${cardClass()} overflow-hidden col-10 col-sm-8 col-lg-3 text-white m-2`}
         >
             <div className='card-header'>To-Do-#{index + 1}</div>
             <div className='card-body m-auto'>
@@ -25,7 +47,11 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
                 </p>
                 <button
                     onClick={() => deleteTodo(id)}
-                    className='btn btn-danger m-auto'
+                    className={`rounded-pill m-auto ${
+                        color === 'bg-danger'
+                            ? 'btn btn-outline-light'
+                            : 'btn btn-danger'
+                    }`}
                 >
                     Delete
                 </button>
