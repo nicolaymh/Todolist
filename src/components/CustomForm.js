@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCardOptionsColor } from '../hooks/useCardOptionsColor';
 import { ErrorFormFields } from './ErrorFormFields';
 import { OptionColor } from './OptionColor';
 import { TodoTitle } from './TodoTitle';
@@ -8,9 +9,10 @@ export const CustomForm = ({
     handleInputChange,
     handleSubmit,
     formError,
-    optionColor,
 }) => {
     const { todo, dateTime } = values;
+
+    const { colors, setColors, handleChangeFocus } = useCardOptionsColor();
 
     return (
         <>
@@ -47,10 +49,13 @@ export const CustomForm = ({
                     </div>
 
                     <div className='row text-center mt-4 d-flex justify-content-center'>
-                        {optionColor.map((color, index) => (
+                        {colors.map((color, index) => (
                             <OptionColor
                                 key={index + new Date().getTime()}
                                 color={color}
+                                colors={colors}
+                                setColors={setColors}
+                                handleChangeFocus={handleChangeFocus}
                             />
                         ))}
                     </div>

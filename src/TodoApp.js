@@ -6,7 +6,6 @@ import { useForm } from './hooks/useForm';
 import { useSubmit } from './hooks/useSubmit';
 
 import './components/styles/styles.css';
-import { CardOptionsColor } from './helpers/CardOptionsColor';
 
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
@@ -17,8 +16,6 @@ export const TodoApp = () => {
         initialStateForm,
     );
 
-    const optionColor = CardOptionsColor();
-
     return (
         <div className='generalContainer container text-center'>
             <div className='row row-cols-1 justify-content-center mt-2'>
@@ -28,7 +25,6 @@ export const TodoApp = () => {
                     handleSubmit={handleSubmit}
                     formError={formError}
                     todos={todos}
-                    optionColor={optionColor}
                 />
 
                 <div className='row justify-content-center mb-4'>
