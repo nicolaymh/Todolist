@@ -1,4 +1,5 @@
 import React from 'react';
+import { cardClass } from '../helpers/cardClass';
 import { getDateFull } from '../helpers/getDateFull';
 
 import './styles/styles.css';
@@ -13,31 +14,11 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
         setTodos([...deleteTodo]);
     };
 
-    const cardClass = () => {
-        switch (color) {
-            case 'bg-primary':
-                return 'addTodoPrimary';
-
-            case 'bg-warning':
-                return 'addTodoWarning';
-
-            case 'bg-info':
-                return 'addTodoInfo';
-
-            case 'bg-success':
-                return 'addTodoSuccess';
-
-            case 'bg-danger':
-                return 'addTodoDanger';
-
-            default:
-                return 'addTodoInfo';
-        }
-    };
+    const addClass = cardClass(color);
 
     return (
         <div
-            className={`${cardClass()} overflow-hidden col-10 col-sm-8 col-lg-3 text-white m-2`}
+            className={`${addClass} overflow-hidden col-10 col-sm-8 col-lg-3 text-white m-2`}
         >
             <div className='card-header'>To-Do-#{index + 1}</div>
             <div className='card-body m-auto'>
