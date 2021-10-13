@@ -40,7 +40,7 @@ export const TodoApp = () => {
                     setValues={setValues}
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
-                    formError={formError}
+                    {...formError}
                     todos={todos}
                     colors={colors}
                     setColors={setColors}

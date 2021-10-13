@@ -7,7 +7,9 @@ export const CustomForm = ({
     values,
     handleInputChange,
     handleSubmit,
-    formError,
+    alertMessage,
+    alertState,
+    alertColor,
     colors,
     setColors,
     handleChangeFocus,
@@ -22,7 +24,12 @@ export const CustomForm = ({
 
             <form className='mx-3 my-3' onSubmit={handleSubmit}>
                 <div className='d-flex justify-content-center'>
-                    {formError && <ErrorFormFields />}
+                    {alertState && (
+                        <ErrorFormFields
+                            alertMessage={alertMessage}
+                            alertColor={alertColor}
+                        />
+                    )}
                 </div>
 
                 <div className='d-flex'>

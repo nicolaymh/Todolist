@@ -2,12 +2,23 @@ import { useState } from 'react';
 
 export const useSubmit = (values, setValues, initialState) => {
     const [todos, setTodos] = useState([]);
-    const [formError, setFormError] = useState(false);
+    const [formError, setFormError] = useState({
+        alertMessage: '',
+        alertState: false,
+        alertColor: '',
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const { id, todo, dateTime, color } = values;
+
+        const checkEqualDates =
+            todos.filter((todo) => {
+                return todo.dateTime === dateTime;
+            }).length > 0
+                ? true
+                : false;
 
         if (
             id.toString().trim() === '' ||
@@ -15,7 +26,17 @@ export const useSubmit = (values, setValues, initialState) => {
             dateTime.trim() === '' ||
             color.trim() === ''
         ) {
-            setFormError(true);
+            setFormError({
+                alertMessage: 'Fill in fields and choose a color',
+                alertState: true,
+                alertColor: 'alert-danger',
+            });
+        } else if (checkEqualDates) {
+            setFormError({
+                alertMessage: 'There is a task with the same date',
+                alertState: true,
+                alertColor: 'alert-dark',
+            });
         } else {
             let organizeDateTime = [...todos, values];
 
