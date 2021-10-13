@@ -2,6 +2,6 @@ export const initialStateForm = {
     id: '',
     todo: '',
     dateTime: '',
-    color: 'bg-primary',
+    color: '',
     state: false,
 };

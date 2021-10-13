@@ -7,12 +7,13 @@ export const useSubmit = (values, setValues, initialState) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { id, todo, dateTime } = values;
+        const { id, todo, dateTime, color } = values;
 
         if (
             id.toString().trim() === '' ||
             todo.trim() === '' ||
-            dateTime.trim() === ''
+            dateTime.trim() === '' ||
+            color.trim() === ''
         ) {
             setFormError(true);
         } else {
