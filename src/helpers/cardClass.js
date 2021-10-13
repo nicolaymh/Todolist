@@ -27,10 +27,7 @@ export const cardClass = (color) => {
                 unselected: 'todoDangerSelected',
             };
 
-        // default:
-        //     return {
-        //         selected: 'addTodoPrimary',
-        //         unselected: 'todoPrimarySelected',
-        //     };
+        default:
+            return;
     }
 };
