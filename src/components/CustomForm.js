@@ -56,6 +56,7 @@ export const CustomForm = ({
                         type='datetime-local'
                         name='dateTime'
                         onChange={handleInputChange}
+                        placeholder='To-Do-Date'
                         value={dateTime}
                     />
                 </div>
