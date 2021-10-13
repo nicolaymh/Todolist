@@ -33,9 +33,9 @@ export const useSubmit = (values, setValues, initialState) => {
             });
         } else if (checkEqualDates) {
             setFormError({
-                alertMessage: 'There is a task with the same date',
+                alertMessage: 'There is a to-do with the same date',
                 alertState: true,
-                alertColor: 'alert-dark',
+                alertColor: 'alert-warning',
             });
         } else {
             let organizeDateTime = [...todos, values];
