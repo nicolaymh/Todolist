@@ -6,7 +6,6 @@ import { useForm } from './hooks/useForm';
 import { useSubmit } from './hooks/useSubmit';
 import { useCardOptionsColor } from './hooks/useCardOptionsColor';
 import { cardOptionsColor } from './helpers/cardOptionsColor';
-import { resetOptionsColor } from './helpers/resetOptionsColor';
 
 import './components/styles/styles.css';
 
@@ -25,7 +24,6 @@ export const TodoApp = () => {
     useEffect(() => {
         const resetCardOptionsColor = () => {
             setColors([...cardOptionsColor]);
-            console.log(resetOptionsColor);
         };
 
         resetCardOptionsColor();
