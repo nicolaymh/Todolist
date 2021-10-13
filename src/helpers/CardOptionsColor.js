@@ -3,7 +3,7 @@ export const cardOptionsColor = [
         background: 'bg-primary',
         design: 'cardPrimary',
         colorSelected: 'cardPrimarySelected',
-        focusState: false,
+        focusState: true,
     },
     {
         background: 'bg-warning',

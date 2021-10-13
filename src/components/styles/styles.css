@@ -24,6 +24,9 @@ body {
     border-radius: 55px;
     background: #0d6efd;
     box-shadow: -5px -5px 10px #052c65, 5px 5px 10px #15b0ff;
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: purple;
 }
 
 .addTodoWarning {
@@ -35,6 +38,9 @@ body {
     border-radius: 55px;
     background: #ffc107;
     box-shadow: -5px -5px 10px #664d03, 5px 5px 10px #ffff0b;
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: purple;
 }
 
 .addTodoInfo {
@@ -46,17 +52,23 @@ body {
     border-radius: 55px;
     background: #0dcaf0;
     box-shadow: -5px -5px 10px #055160, 5px 5px 10px #15ffff;
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: purple;
 }
 
 .addTodoSuccess {
     border-radius: 55px;
     background: #198754;
-    box-shadow: -5px -5px 10px #0a3622, 5px 5px 10px #28d886;
+    box-shadow: inset -5px -5px 10px #0a3622, inset 5px 5px 10px #28d886;
 }
 .todoSuccessSelected {
     border-radius: 55px;
-    background: #0dcaf0;
-    box-shadow: -5px -5px 10px #055160, 5px 5px 10px #15ffff;
+    background: #198754;
+    box-shadow: -5px -5px 10px #0a3622, 5px 5px 10px #28d886;
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: purple;
 }
 
 .addTodoDanger {
@@ -68,6 +80,9 @@ body {
     border-radius: 55px;
     background: #dc3545;
     box-shadow: -5px -5px 10px #58151c, 5px 5px 10px #ff556e;
+    opacity: 0.4;
+    text-decoration: line-through;
+    text-decoration-color: purple;
 }
 
 /*---------------------------------------------------------------------------*/
