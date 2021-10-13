@@ -6,6 +6,7 @@ import { useForm } from './hooks/useForm';
 import { useSubmit } from './hooks/useSubmit';
 import { useCardOptionsColor } from './hooks/useCardOptionsColor';
 import { cardOptionsColor } from './helpers/cardOptionsColor';
+import { colortitleButton } from './helpers/colortitleButton';
 
 import './components/styles/styles.css';
 
@@ -20,6 +21,8 @@ export const TodoApp = () => {
 
     const { colors, setColors, handleChangeFocus } =
         useCardOptionsColor(setValues);
+
+    const colorTitleAndButtonAdd = colortitleButton(values);
 
     useEffect(() => {
         const resetCardOptionsColor = () => {
@@ -42,6 +45,7 @@ export const TodoApp = () => {
                     colors={colors}
                     setColors={setColors}
                     handleChangeFocus={handleChangeFocus}
+                    {...colorTitleAndButtonAdd}
                 />
 
                 <div className='row justify-content-center mb-4'>

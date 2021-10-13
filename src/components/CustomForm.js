@@ -11,12 +11,14 @@ export const CustomForm = ({
     colors,
     setColors,
     handleChangeFocus,
+    colorTitle,
+    colorButtonAdd,
 }) => {
     const { todo, dateTime } = values;
 
     return (
         <div className='mt-2 col pb-3'>
-            <TodoTitle />
+            <TodoTitle colorTitle={colorTitle} />
 
             <form className='mx-3 my-3' onSubmit={handleSubmit}>
                 <div className='d-flex justify-content-center'>
@@ -34,7 +36,7 @@ export const CustomForm = ({
                         value={todo}
                     />
                     <button
-                        className='btn btn-warning mb-2 rounded-pill border-4'
+                        className={`btn ${colorButtonAdd} mb-2 rounded-pill border-4`}
                         type='submit'
                     >
                         Add
