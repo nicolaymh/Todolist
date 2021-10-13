@@ -1,12 +1,10 @@
 import React from 'react';
-// import { useCardOptionsColor } from '../hooks/useCardOptionsColor';
 import { ErrorFormFields } from './ErrorFormFields';
 import { OptionColor } from './OptionColor';
 import { TodoTitle } from './TodoTitle';
 
 export const CustomForm = ({
     values,
-    // setValues,
     handleInputChange,
     handleSubmit,
     formError,
@@ -15,11 +13,6 @@ export const CustomForm = ({
     handleChangeFocus,
 }) => {
     const { todo, dateTime } = values;
-
-    // const { colors, setColors, handleChangeFocus } =
-    //     useCardOptionsColor(setValues);
-
-    // console.log(colors);
 
     return (
         <div className='mt-2 col pb-3'>
