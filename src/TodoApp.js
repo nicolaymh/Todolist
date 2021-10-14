@@ -13,10 +13,15 @@ import './components/styles/styles.css';
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
+    let storage = localStorage.getItem('todos')
+        ? JSON.parse(localStorage.getItem('todos'))
+        : [];
+
     const { todos, setTodos, handleSubmit, formError } = useSubmit(
         values,
         setValues,
         initialStateForm,
+        storage,
     );
 
     const { colors, setColors, handleChangeFocus } =

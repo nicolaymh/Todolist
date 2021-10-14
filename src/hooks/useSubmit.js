@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export const useSubmit = (values, setValues, initialState) => {
-    const [todos, setTodos] = useState([]);
+export const useSubmit = (values, setValues, initialState, storage) => {
+    const [todos, setTodos] = useState(storage);
     const [formError, setFormError] = useState({
         alertMessage: '',
         alertState: false,
         alertColor: '',
     });
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

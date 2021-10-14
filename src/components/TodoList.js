@@ -28,7 +28,7 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
         <div
             className={`${
                 state ? unselected : selected
-            } overflow-hidden col-9 col-sm-4 col-md-4 col-lg-2 text-white m-2 pb-2`}
+            } overflow-hidden col-10 col-sm-5 col-md-4 col-lg-3 text-white m-2 pb-2`}
         >
             <div
                 className='card-header fw-bold'
