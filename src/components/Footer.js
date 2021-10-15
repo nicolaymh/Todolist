@@ -7,7 +7,7 @@ export const Footer = () => {
                 <hr className='text-light' />
             </div>
             <div className='col-12'>
-                <footer className='text-center text-black'>
+                <footer className='fw-light text-muted '>
                     This Website is Developed by Nicolay Moreno, 2021
                 </footer>
             </div>
