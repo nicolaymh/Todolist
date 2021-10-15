@@ -1,3 +1,5 @@
+//? This function return me a object which contains the classes that we are going to apply to the general title and the add button when we select a color of the options.
+
 export const colortitleButton = (values) => {
     const { color } = values;
 

@@ -1,3 +1,5 @@
+//? This array of objects contains the option characteristics of the colors option
+
 export const cardOptionsColor = [
     {
         background: 'bg-primary',

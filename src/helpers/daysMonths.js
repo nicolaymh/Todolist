@@ -1,3 +1,5 @@
+//? This function contains and return two arrays that allow me to organize the tasks that are listed.
+
 export const daysMonths = () => {
     const days = [
         `Sunday`,

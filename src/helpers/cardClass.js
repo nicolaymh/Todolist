@@ -1,3 +1,5 @@
+//? This function handles two classes which mark or unmark the cards in the task list.
+
 export const cardClass = (color) => {
     switch (color) {
         case 'bg-primary':

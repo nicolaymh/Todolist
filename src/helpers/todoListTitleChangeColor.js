@@ -1,3 +1,5 @@
+//? Function that verifies the class that has applied the title of the tasks and depending on this removes and puts another to generate an infinite color change.
+
 export const todoListTitleChangeColor = (title) => {
     if (title?.classList.contains('text-primary')) {
         title?.classList.remove('text-primary');

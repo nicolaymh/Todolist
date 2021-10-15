@@ -1,5 +1,7 @@
 import { daysMonths } from './daysMonths';
 
+//? This function returns all the data to me to start adding in the TodoList component.
+
 export const getDateFull = (dateTime) => {
     const { days, months } = daysMonths();
 

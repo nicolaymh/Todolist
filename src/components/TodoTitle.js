@@ -2,6 +2,7 @@ import React from 'react';
 
 import logo from './images/logo.png';
 
+//* Component that allows me to change the color of the title every time I choose a color option.
 export const TodoTitle = ({ colorTitle }) => {
     return (
         <>

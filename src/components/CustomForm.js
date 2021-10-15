@@ -3,6 +3,8 @@ import { ErrorFormFields } from './ErrorFormFields';
 import { OptionColor } from './OptionColor';
 import { TodoTitle } from './TodoTitle';
 
+//* This component is the most important in the application. from here we take care of everything, and send all the properties to the other functional components.
+
 export const CustomForm = ({
     values,
     handleInputChange,
