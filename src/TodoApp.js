@@ -7,9 +7,10 @@ import { useSubmit } from './hooks/useSubmit';
 import { useCardOptionsColor } from './hooks/useCardOptionsColor';
 import { cardOptionsColor } from './helpers/cardOptionsColor';
 import { colortitleButton } from './helpers/colortitleButton';
+import { Footer } from './components/Footer';
+import { TodoListTitle } from './components/TodoListTitle';
 
 import './components/styles/styles.css';
-import { Footer } from './components/Footer';
 
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
@@ -53,6 +54,8 @@ export const TodoApp = () => {
                     handleChangeFocus={handleChangeFocus}
                     {...colorTitleAndButtonAdd}
                 />
+
+                <TodoListTitle />
 
                 <div className='row justify-content-center mb-4'>
                     {todos.map((eleToDo, index) => (
