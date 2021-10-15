@@ -1,5 +1,7 @@
 import React from 'react';
 
+//* Component to send the alert message when it is going to send the data to the useState to control the to-do list.
+
 export const ErrorFormFields = ({ alertMessage, alertColor }) => {
     return (
         <div

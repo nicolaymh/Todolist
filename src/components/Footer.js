@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export const Footer = () => {
+//* Component that just shows me the footer of the app. React memo is not necessary because it does not have a high load but it is done in an educational way.
+
+export const Footer = memo(() => {
+    console.log('se renderizo el componente footer');
+
     return (
         <div className='row m-4'>
             <div className='col-12'>
@@ -13,4 +17,4 @@ export const Footer = () => {
             </div>
         </div>
     );
-};
+});

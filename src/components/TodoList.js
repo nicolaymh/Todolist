@@ -4,6 +4,8 @@ import { getDateFull } from '../helpers/getDateFull';
 
 import './styles/styles.css';
 
+//* This component show me all to-do. Every time that it add a to-do, back to iterar
+
 export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
     const { id, todo, dateTime, color, state } = eleToDo;
 

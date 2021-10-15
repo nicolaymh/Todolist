@@ -1,5 +1,6 @@
 import React from 'react';
 
+//* Component that shows me the color option for each task. The handleChange Focus function sends the chosen color to the controlling object.
 export const OptionColor = ({ index, color, handleChangeFocus }) => {
     const { background, design, colorSelected, focusState } = color;
 
