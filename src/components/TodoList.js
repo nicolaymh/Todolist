@@ -36,22 +36,27 @@ export const TodoList = ({ eleToDo, index, todos, setTodos }) => {
             >
                 To-Do-#{index + 1}
             </div>
-            <div className='card-body p-1' onClick={() => handleStateTodo(id)}>
+            <div
+                className='card-body p-1 mb-4'
+                onClick={() => handleStateTodo(id)}
+            >
                 <h5 className='card-title'>{todo}</h5>
                 <p className='fs-6'>
                     {`${day}, ${month} ${dayMonth}, ${year} at ${hour}:${minutes}`}
                 </p>
             </div>
-            <button
-                className={`rounded-pill p-2 mb-auto ${
-                    color === 'bg-danger'
-                        ? 'btn btn-outline-light'
-                        : 'btn btn-danger'
-                }`}
-                onClick={() => deleteTodo(id)}
-            >
-                Delete
-            </button>
+            <div className='fixed-bottom pb-2'>
+                <button
+                    className={`rounded-pill pb-2 ${
+                        color === 'bg-danger'
+                            ? 'btn btn-outline-light'
+                            : 'btn btn-danger'
+                    }`}
+                    onClick={() => deleteTodo(id)}
+                >
+                    Delete
+                </button>
+            </div>
         </div>
     );
 };
