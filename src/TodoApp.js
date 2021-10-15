@@ -9,6 +9,7 @@ import { cardOptionsColor } from './helpers/cardOptionsColor';
 import { colortitleButton } from './helpers/colortitleButton';
 
 import './components/styles/styles.css';
+import { Footer } from './components/Footer';
 
 export const TodoApp = () => {
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
@@ -64,6 +65,8 @@ export const TodoApp = () => {
                         />
                     ))}
                 </div>
+
+                <Footer />
             </div>
         </div>
     );
