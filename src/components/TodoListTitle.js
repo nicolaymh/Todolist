@@ -1,14 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { todoListTitleChangeColor } from '../helpers/todoListTitleChangeColor';
 
 export const TodoListTitle = ({ todos }) => {
+    const [count, setCount] = useState(0);
+
     const refTitle = useRef();
+    const title = refTitle.current;
 
     const todosAmount = todos.length;
 
-    const title = refTitle.current;
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCount(count + 1);
 
-    todoListTitleChangeColor(title);
+            todoListTitleChangeColor(title);
+        }, 1000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, [count, title]);
 
     return (
         <div className='row justify-content-center bg'>
