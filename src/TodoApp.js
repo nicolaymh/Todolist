@@ -13,24 +13,24 @@ import { TodoListTitle } from './components/TodoListTitle';
 import './components/styles/styles.css';
 
 export const TodoApp = () => {
+    //! Custom Hook: to control form data.
     const { values, setValues, handleInputChange } = useForm(initialStateForm);
 
-    let storage = localStorage.getItem('todos')
-        ? JSON.parse(localStorage.getItem('todos'))
-        : [];
-
+    //! Custom hook: to send the new todo and verify it.
     const { todos, setTodos, handleSubmit, formError } = useSubmit(
         values,
         setValues,
         initialStateForm,
-        storage,
     );
 
+    //! Custom hook: to control the chosen color.
     const { colors, setColors, handleChangeFocus } =
         useCardOptionsColor(setValues);
 
+    //? colortitleButton is a function that returns an object with the name of the class that will take the general title and the Add button. This every time a color is selected.
     const colorTitleAndButtonAdd = colortitleButton(values);
 
+    //* It runs every time the useState is changed to handle to-do of the Custom Hook useForm. Basically this return me all to its initial state
     useEffect(() => {
         const resetCardOptionsColor = () => {
             setColors([...cardOptionsColor]);

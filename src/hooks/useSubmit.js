@@ -1,17 +1,28 @@
 import { useEffect, useState } from 'react';
 
-export const useSubmit = (values, setValues, initialState, storage) => {
+//* This custom hook handle me all the tasks that I add. First verify the localstorage and this is the initial state that it add to hook.
+
+export const useSubmit = (values, setValues, initialState) => {
+    let storage = localStorage.getItem('todos')
+        ? JSON.parse(localStorage.getItem('todos'))
+        : [];
+
+    //! Hook:
     const [todos, setTodos] = useState(storage);
+
+    //! Hook that controls the alerts that are sent when the form data is not correct.
     const [formError, setFormError] = useState({
         alertMessage: '',
         alertState: false,
         alertColor: '',
     });
 
+    //* Every time that there is a change in the todos hook it send the data to localstorage.
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos]);
 
+    //? Function that checks the data in the form and organizes it. The tasks are organizing by date. If exists some task with the same date, it will send the alert thought the formError useState.
     const handleSubmit = (e) => {
         e.preventDefault();
 
