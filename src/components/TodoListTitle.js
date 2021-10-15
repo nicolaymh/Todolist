@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import { todoListTitleChangeColor } from '../helpers/todoListTitleChangeColor';
 
-export const TodoListTitle = () => {
+export const TodoListTitle = ({ todos }) => {
     const refTitle = useRef();
+
+    const todosAmount = todos.length;
 
     const title = refTitle.current;
 
@@ -15,7 +17,9 @@ export const TodoListTitle = () => {
                     ref={refTitle}
                     className='text-primary fst-italic shadow-lg'
                 >
-                    Add Your To-Do
+                    {todosAmount === 0
+                        ? 'Add Your To-Do'
+                        : `To-Do-Amount (${todosAmount})`}
                 </h2>
             </div>
         </div>

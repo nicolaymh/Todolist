@@ -16,5 +16,5 @@ export const todoListTitleChangeColor = (title) => {
             title?.classList.remove('text-danger');
             title?.classList.add('text-primary');
         }
-    }, 800);
+    }, 1000);
 };

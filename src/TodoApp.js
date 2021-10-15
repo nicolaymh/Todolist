@@ -55,7 +55,7 @@ export const TodoApp = () => {
                     {...colorTitleAndButtonAdd}
                 />
 
-                <TodoListTitle />
+                <TodoListTitle todos={todos} />
 
                 <div className='row justify-content-center mb-4'>
                     {todos.map((eleToDo, index) => (
