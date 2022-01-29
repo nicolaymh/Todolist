@@ -13,7 +13,7 @@ export const CustomForm = ({
     alertState,
     alertColor,
     colors,
-    setColors,
+    setColors, 
     handleChangeFocus,
     colorTitle,
     colorButtonAdd,
